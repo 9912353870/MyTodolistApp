@@ -1,17 +1,7 @@
 <?php
  require("config.php");
  $data = array();
- function produkt_options($options, $default, $selected = null){
-    $output = array();
-    foreach ($default as $key => $name) {
-        $output[] = '<option value="'.$key.'" '.$selValue.'>'.$name.'</option>';
-    }
-    foreach ($options as $key => $name) {
-        $selValue = ($key == $selected & is_numeric($selected))? 'selected="selected"' : '';
-        $output[] = '<option value="'.$key.'" '.$selValue.'>'.$name.'</option>';
-    }
-    return implode('', $output);
-}
+
  $data['categories'] = array("",
                              "Automation-testing",
                              "Bug: design",
